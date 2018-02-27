@@ -1,0 +1,10 @@
+Here are your current farms:
+{% if farm_list %}
+    <ul>
+    {% for farm in farm_list %}
+        <li><a href="/farm/{{ farm.id }}/">{{ farm.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You haven't entered any farms. :(</p>
+{% endif %}
